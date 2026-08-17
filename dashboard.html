@@ -1,0 +1,7 @@
+<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>داشبورد</title><link rel="stylesheet" href="/static/style.css"></head><body>
+<nav><b>شبکه<span>یار</span></b><a href="/logout">خروج</a></nav><main class="dash">
+<div class="welcome"><h1>سلام {{u.name}} 👋</h1><p>کد معرف: <b>{{u.ref_code}}</b></p><p class="link">لینک دعوت: {{request.host_url}}register?ref={{u.ref_code}}</p></div>
+<section class="cards"><article><small>موجودی</small><strong>{{"{:,}".format(u.balance)}} تومان</strong></article><article><small>معرف مستقیم</small><strong>{{direct}}</strong></article><article><small>کل مجموعه</small><strong>{{total}}</strong></article></section>
+<div class="panel"><h2>درخواست برداشت</h2><form method="post" action="/withdraw"><input name="amount" type="number" min="1" placeholder="مبلغ برداشت"><input name="card" placeholder="شماره کارت ۱۶ رقمی" maxlength="16"><button class="btn">ثبت درخواست</button></form><p class="muted">در نسخه عملیاتی، تأیید هویت، کنترل موجودی و پرداخت امن باید فعال باشد.</p></div>
+<div class="panel"><h2>تاریخچه برداشت</h2>{% for x in withdrawals %}<p>{{"{:,}".format(x.amount)}} تومان · {{x.status}}</p>{% else %}<p class="muted">هنوز درخواستی ثبت نشده.</p>{% endfor %}</div>
+</main></body></html>
