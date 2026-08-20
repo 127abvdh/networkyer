@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, session, jsonify
 import sqlite3, secrets, hashlib
 from pathlib import Path
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=".")
 app.secret_key = secrets.token_hex(32)
 DB = Path("networkyar.db")
 
