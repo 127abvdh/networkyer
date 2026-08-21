@@ -1,1 +1,45 @@
-*{box-sizing:border-box}body{margin:0;background:#0a1020;color:#eef2ff;font-family:Tahoma,Arial,sans-serif;line-height:1.9}nav{height:72px;padding:0 6%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #202c48}nav b{font-size:24px}nav span{color:#5ee6b5}nav a{margin-right:18px;color:#c5cee2}.btn{display:inline-block;border:0;border-radius:12px;background:#5ee6b5;color:#06131a;padding:11px 18px;font-weight:800;cursor:pointer}.hero{text-align:center;padding:100px 20px;background:radial-gradient(circle,#173b46,#0a1020 65%)}.hero h1{font-size:clamp(34px,6vw,65px);margin:15px 0}.hero p{color:#b4bfd5;max-width:680px;margin:0 auto 28px}.hero small{color:#5ee6b5}.cards{max-width:1050px;margin:35px auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:0 20px}.cards article,.panel,.welcome,.formbox{background:#111a30;border:1px solid #263450;border-radius:18px;padding:25px}.cards strong{display:block;font-size:28px;margin-top:8px}.formbox{max-width:440px;margin:70px auto}.formbox input,.panel input{width:100%;padding:13px;margin:7px 0;border-radius:10px;border:1px solid #34415d;background:#0a1020;color:#fff}.formbox .btn{width:100%;margin-top:8px}.error{background:#542530;padding:10px;border-radius:10px}.dash{max-width:1050px;margin:35px auto;padding:0 20px}.link{word-break:break-all;color:#9da9c3}.muted{color:#909db6}footer{text-align:center;padding:45px;color:#73809a}@media(max-width:750px){.cards{grid-template-columns:1fr}.hero{padding:65px 20px}}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #003b8f;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+.card {
+    background: #ffffff;
+    color: #222222;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+button,
+.btn {
+    background: #0057d9;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover,
+.btn:hover {
+    background: #0042a8;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
