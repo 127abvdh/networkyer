@@ -34,6 +34,8 @@ def init_db():
     """)
     con.commit(); con.close()
 
+init_db()
+
 def hashpw(p): return hashlib.sha256(p.encode()).hexdigest()
 
 @app.route("/")
